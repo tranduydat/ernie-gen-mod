@@ -1,0 +1,9 @@
++ PRED=/home/./checkpoints/dev_output
++ PREFIX=/home/./datasets/squad_qg//dev
++ python qg/eval_on_unilm_tokenized_ref.py --src /home/./datasets/squad_qg//dev.pa.tok.txt --tgt /home/./datasets/squad_qg//dev.q.tok.txt --out_file /home/./checkpoints/dev_output
+Traceback (most recent call last):
+  File "qg/eval_on_unilm_tokenized_ref.py", line 221, in <module>
+    eval(args.out_file, args.src_file, args.tgt_file)
+  File "qg/eval_on_unilm_tokenized_ref.py", line 186, in eval
+    pair['prediction'] = output[idx]
+IndexError: list index out of range
