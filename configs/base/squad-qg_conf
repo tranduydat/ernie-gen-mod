@@ -8,7 +8,7 @@ max_src_len=512
 max_tgt_len=96
 tokenized_input="true"
 continuous_position="true"
-batch_size=1
+batch_size=4
 in_tokens="false"
 tgt_type_id=3
 
@@ -38,9 +38,9 @@ data_path="./datasets/squad_qg/"
 train_set="train.tsv"
 dev_set="dev.tsv"
 test_set="test.tsv"
-do_train="False"
+do_train="True"
 do_val="true"
-do_test="False"
+do_test="True"
 
 #evaluate
 eval_script="bash ./eval/tasks/squad_qg/eval.sh"

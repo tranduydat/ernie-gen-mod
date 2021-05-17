@@ -438,10 +438,15 @@ class ErnieGenFinetune(object):
                     break
 
             time_end = time.time()
-        
-            #sort -t$'\t' -k1n dev_output.part* |awk -F"\t" '{print $2}'> dev_output
-            os.system("sort -t$'\t' -k1n %s.part* |awk -F\"\t\" '{print $2}'> %s" %
-                    (outfile, outfile))
+            # Cai nay y ha 
+            # sort -t$'\t' -k1n dev_output.part* |awk -F"\t" '{print $2}'> dev_output
+            # print('---------------------------------------------------------------------------------------------------------')
+            # print(outfile)
+            # print("sort -t$\t -k1n %s.part* |awk -F\"\t\" '{print $2}'> %s" %
+            #         (outfile, outfile))
+            # print('---------------------------------------------------------------------------------------------------------')
+            os.system("sort -t$\t -k1n %s.part* |awk -F\"\t\" '{print $2}'> %s" %
+                     (outfile, outfile))
             os.system("rm %s.part*" % (outfile))
             os.system("rm %s/%s_dec_finish.*" % (output_path, eval_phase))
 

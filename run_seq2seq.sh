@@ -27,7 +27,7 @@ export PRED_PREFIX=`echo ${pred_set:-"pred.tsv"} | sed 's/\.tsv$//'`
 distributed_args="--node_ips ${PADDLE_TRAINERS} \
                 --node_id ${PADDLE_TRAINER_ID} \
                 --current_node_ip ${POD_IP}"
-python -u ./utils/finetune_launch.py ${distributed_args} \
+python2.7 -u ./utils/finetune_launch.py ${distributed_args} \
     ./run_seq2seq.py --use_cuda true \
                    --do_train $do_train \
                    --do_val $do_val \
